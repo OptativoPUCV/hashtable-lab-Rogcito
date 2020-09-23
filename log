@@ -14,3 +14,9 @@ Wed Sep 23 20:06:09 UTC 2020:
  1 file changed, 45 insertions(+), 7 deletions(-)
  tests:  0|0
 8b56588
+Wed Sep 23 20:27:34 UTC 2020: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+55e25c7

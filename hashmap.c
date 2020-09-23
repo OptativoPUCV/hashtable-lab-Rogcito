@@ -47,7 +47,7 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
     Pair*dato=createPair(key,value);
     long i=hash(key,map->capacity);
-    while(map->buckets[i]->key!=NULL){
+    while(map->buckets[i]!=NULL){
       if(map->buckets[i]->key==NULL)break;
       if(i==map->capacity-1)i=0;
       i++;
