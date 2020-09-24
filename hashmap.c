@@ -97,7 +97,7 @@ void eraseMap(HashMap * map,  char * key) {
         map->size--;
         map->buckets[i]->key=NULL;
       }
-      if(i==map->capacity-1){
+      if(i+1==map->capacity){
         i=0;
       }  
       i++;
@@ -112,7 +112,7 @@ void * searchMap(HashMap * map,  char * key) {
         map->current=i;
         return map->buckets[i]->value;
       }
-      if(i==map->capacity-1){
+      if(i+1==map->capacity){
         i=0;
       }  
       i++;
