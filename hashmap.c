@@ -45,21 +45,21 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-    Pair*dato=createPair(key,value);
     long i;
     i=hash(key,map->capacity);
+    Pair*dato=createPair(key,value);
     while(map->buckets[i]!=NULL){
-      if(i==map->capacity-1){
+      if(i+1==map->capacity){
         i=0;
-      } 
+      }
       if(map->buckets[i]->key==NULL){
         break;
-      } 
+      }
       i++;
     }
     map->buckets[i]=dato;
     map->size++;
-    map->current=i;
+    map->current=-1;
 }
 
 void enlarge(HashMap * map) {
@@ -70,7 +70,7 @@ void enlarge(HashMap * map) {
     map->capacity=map->capacity*2;
     map->size=0;
     map->buckets=(Pair**)malloc(map->capacity*sizeof(Pair*));
-    while(i<=auxCapacity-1){
+    while(i+1<=auxCapacity){
       if(auxBuckets[i]!=NULL){
         insertMap(map,auxBuckets[i]->key,auxBuckets[i]->value);
       }
