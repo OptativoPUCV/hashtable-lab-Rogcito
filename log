@@ -20,3 +20,9 @@ Wed Sep 23 20:27:34 UTC 2020:
  tests:  17|0
 total_score: 70/70
 55e25c7
+Thu Sep 24 21:35:25 UTC 2020: 
+ hashmap.c | 45 +++++++++++++++++++++++++++++----------------
+ 1 file changed, 29 insertions(+), 16 deletions(-)
+ tests:  17|0
+total_score: 70/70
+bd19782
