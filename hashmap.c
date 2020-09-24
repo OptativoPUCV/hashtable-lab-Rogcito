@@ -63,10 +63,10 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    long i=0;
     enlarge_called = 1; //no borrar (testing purposes)
-    Pair**auxBuckets=map->buckets;
+    long i=0;
     long auxCapacity=map->capacity;
+    Pair**auxBuckets=map->buckets;
     map->capacity=map->capacity*2;
     map->size=0;
     map->buckets=(Pair**)malloc(map->capacity*sizeof(Pair*));
