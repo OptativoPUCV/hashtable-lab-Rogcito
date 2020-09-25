@@ -109,7 +109,7 @@ void * searchMap(HashMap * map,  char * key) {
 
 void * firstMap(HashMap * map) {
     long i=0;
-    while(i<map->capacity){
+    while(i<=map->capacity){
       if((map->buckets[i]!=NULL)&&(map->buckets[i]->key!=NULL)&&(map->buckets[i]->value!=NULL)){
         map->current=i;
         return map->buckets[i]->value;
