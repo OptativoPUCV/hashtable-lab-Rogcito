@@ -120,5 +120,13 @@ void * firstMap(HashMap * map) {
 }
 
 void * nextMap(HashMap * map) {
+    long i=map->current;
+    while(i<map->capacity){
+      if((map->buckets[i+1]!=NULL)&&(map->buckets[i+1]->key!=NULL)&&(map->buckets[i+1]->value!=NULL)){
+        map->current=i+1;
+        return map->buckets[i+1]->value;
+      }
+      i++;
+    }
     return NULL;
 }
